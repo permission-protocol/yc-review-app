@@ -1,0 +1,8 @@
+version: 1
+protected_paths:
+  - match: "src/billing/**"
+    rationale: "Billing and invoice export behavior require a named human decision."
+  - match: ".github/workflows/**"
+    rationale: "Workflow changes can alter the enforcement boundary."
+  - match: ".permission-protocol.yml"
+    rationale: "Changes to this policy must not silently weaken its protection."
