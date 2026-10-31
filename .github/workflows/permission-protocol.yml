@@ -7,7 +7,9 @@ jobs:
       contents: read
       pull-requests: read
     steps:
-      - uses: permission-protocol/deploy-gate@v2
+      # Current main's packaging fix; verified upstream Test run 40588912673.
+      # The moving v2 tag still references the expression-length defect.
+      - uses: permission-protocol/deploy-gate@ec9549dd67d09b85c67b247d8d418a7093dd4c4d
         with:
           pp-api-key: ${{ secrets.PP_API_KEY }}
           pp-base-url: https://app.permissionprotocol.com

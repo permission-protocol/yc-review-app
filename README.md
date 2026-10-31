@@ -24,6 +24,6 @@ Once setup is verified, the reviewer should see the real request in the YC Revie
 ## Gate configuration
 
 - `.permission-protocol.yml` identifies protected billing, workflow, and policy files.
-- The gate workflow uses `permission-protocol/deploy-gate@v2`, matching the current platform setup template. It fails closed without a valid repository key.
+- The gate workflow pins `permission-protocol/deploy-gate` to `ec9549dd67d09b85c67b247d8d418a7093dd4c4d`, the upstream main revision verified by Test run 40588912673. The moving `v2` tag still has a GitHub expression-length packaging defect. The pinned client fails closed without a valid repository key.
 - The required approval status must be `permission-protocol/approval`, pinned to Permission Protocol GitHub App ID `3065051`. A similarly named workflow or green test run is not that approval.
 - No auto-merge or deployment is configured.
