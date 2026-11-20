@@ -1,5 +1,7 @@
 name: Permission Protocol
-on: [pull_request]
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
 jobs:
   approval:
     runs-on: ubuntu-latest
